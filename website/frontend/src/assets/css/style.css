@@ -4,7 +4,7 @@
   --gunmetal: #333D4D;
   --muted-steel: #70778C;
   --mercury: #A9B2C3;
-  --aureus-fade: #D4AF37; /* Gold */
+  --omnium-fade: #D4AF37; /* Gold */
   --cyber-blue: #00D2FF;
 }
 
@@ -44,7 +44,7 @@ nav {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: 4px;
-  background: linear-gradient(to right, #ffffff, var(--aureus-fade));
+  background: linear-gradient(to right, #ffffff, var(--omnium-fade));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -88,7 +88,7 @@ nav {
   flex: 1;
 }
 
-.card h3 { color: var(--aureus-fade); margin-top: 0; }
+.card h3 { color: var(--omnium-fade); margin-top: 0; }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {

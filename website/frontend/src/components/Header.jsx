@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 
 const Header = () => {
-	
+
   const { user, isAuthenticated } = useAuth();
 
   return (
     <header className="fixed-header">
       <nav>
-        <Link to="/" className="logo">AUREUS</Link>
+        <Link to="/" className="logo">OMNIUM</Link>
         <ul className="nav-menu">
           <li><Link to="/">Home</Link></li>
           
