@@ -1,29 +1,50 @@
+// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';
-// Placeholder component for new pages
-const PagePlaceholder = ({ title }) => <div className="page-container"><h1>{title}</h1><p>Content coming soon...</p></div>;
+import { AuthProvider } from './context/AuthContext.jsx';
+import Header from './components/Header.jsx';
+import Home from './pages/Home.jsx';
+
+// Placeholder for the requested page containers
+const Page = ({ title }) => (
+  <div className="page-container">
+    <h1>{title}</h1>
+    <p>This is the placeholder for {title}.</p>
+  </div>
+);
 
 function App() {
   return (
-    <Router>
-      <div className="event-horizon">
-        <Header />
-        <main className="content-body">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/play" element={<PagePlaceholder title="Play Now" />} />
-            <Route path="/tools/skill-calculator" element={<PagePlaceholder title="Skill Calculator" />} />
-            <Route path="/tools/crafterbuddy" element={<PagePlaceholder title="CrafterBuddy" />} />
-            <Route path="/tools/spacebuddy" element={<PagePlaceholder title="SpaceBuddy" />} />
-            <Route path="/tools/contracts" element={<PagePlaceholder title="Contracts" />} />
-            <Route path="/senate/proposals" element={<PagePlaceholder title="Senate Proposals" />} />
-            <Route path="/senate/discussion" element={<PagePlaceholder title="Senate Discussion" />} />
-            <Route path="/support" element={<PagePlaceholder title="Support" />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className="event-horizon">
+          <Header />
+          <main className="content-body">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              
+              {/* Game Routes */}
+              <Route path="/play" element={<Page title="Play" />} />
+              <Route path="/tools/skill-calculator" element={<Page title="Skill Calculator" />} />
+              <Route path="/tools/crafterbuddy" element={<Page title="CrafterBuddy" />} />
+              <Route path="/tools/spacebuddy" element={<Page title="SpaceBuddy" />} />
+              <Route path="/tools/contracts" element={<Page title="Contracts" />} />
+              
+              {/* Community & Senate Routes */}
+              <Route path="/senate/proposals" element={<Page title="Senate Proposals" />} />
+              <Route path="/senate/discussion" element={<Page title="Senate Discussion" />} />
+              
+              {/* Support */}
+              <Route path="/support" element={<Page title="Support" />} />
+              
+              {/* Auth Placeholders */}
+              <Route path="/login" element={<Page title="Login" />} />
+              <Route path="/register" element={<Page title="Register" />} />
+              <Route path="/profile" element={<Page title="User Profile" />} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
