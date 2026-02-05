@@ -5,6 +5,9 @@ const Header = () => {
 
   const { user, isAuthenticated } = useAuth();
 
+  // Placeholder staff check - will eventually tie into Discord roles
+  const isStaff = true;
+
   return (
     <header className="fixed-header">
       <nav>
@@ -57,9 +60,12 @@ const Header = () => {
           </li>
 
           <li><Link to="/support">Support</Link></li>
+
+		  <li>{isStaff && <Link to="/forge" className="dropdown">Forge</Link>}</li>
         </ul>
 
 		<div className="user-actions">
+		  
           {isAuthenticated ? (
             <div className="profile-group">
               <span className="user-name">{user?.name || 'Pilot'}</span>
@@ -67,7 +73,7 @@ const Header = () => {
             </div>
           ) : (
             <div className="auth-group">
-              <Link to="/login" className="login-link">Login</Link>
+              <Link to="/login" className="register-btn">Login</Link>
               <Link to="/register" className="register-btn">Register</Link>
             </div>
           )}
