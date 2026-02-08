@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../../../styles/pages/community.css";
 
 export function CommunitySenateDiscussion() {

@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../../styles/pages/register.css";
 
 export function Register() {

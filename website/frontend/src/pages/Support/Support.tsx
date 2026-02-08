@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../../styles/pages/support.css";
 
 export function Support() {

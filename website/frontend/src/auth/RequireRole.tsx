@@ -1,6 +1,6 @@
-import React from "react";
+
 import { Navigate, useLocation } from "react-router-dom";
-import { Role, useAuth } from "./AuthContext";
+import { type Role, useAuth } from "./AuthContext";
 
 export function RequireRole({
   role,

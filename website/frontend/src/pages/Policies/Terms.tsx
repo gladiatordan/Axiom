@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../../styles/pages/policies.css";
 
 export function PoliciesTerms() {

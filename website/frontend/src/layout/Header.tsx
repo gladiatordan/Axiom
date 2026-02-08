@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Link, NavLink as RRNavLink, useLocation } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
-import { NAV_SECTIONS, NavSection } from "../nav/navModel";
+import { NAV_SECTIONS, type NavSection } from "../nav/navModel";
 import { NavTray } from "../nav/NavTray";
 import { MobileNav } from "../nav/MobileNav";
 
