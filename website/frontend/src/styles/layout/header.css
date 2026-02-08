@@ -1,0 +1,41 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(13, 20, 32, 0.86);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--ax-border);
+}
+
+.header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: var(--ax-scanline);
+  opacity: 0.55;
+}
+
+.header__inner {
+  height: var(--ax-header-h);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.08));
+}
