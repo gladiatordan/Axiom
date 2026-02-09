@@ -1,0 +1,26 @@
+:root {
+  --bg-void: #050507;
+  --header-bg: #000;
+
+  /* Axiom-ish accents (logo red + terminal cyan) */
+  --accent-red: #a82f2c;
+  --accent-blue: #00d9ff;
+
+  --text-dim: #777780;
+  --text-bright: #ffffff;
+
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.10);
+
+  --font-ui: "Inter", sans-serif;
+  --font-tech: "Rajdhani", sans-serif;
+  --header-height: 80px;
+
+  --ease: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --t-fast: 140ms;
+  --t: 240ms;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
